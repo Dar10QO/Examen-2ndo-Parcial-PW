@@ -12,6 +12,8 @@ public function abrirFormulario(){
     return view('formFrituras');
 }
 
+#Funcion Para validar
+
 public function registrarFrituras(Request $request)
 {
     $validateInfo = $request->validate([
@@ -23,6 +25,7 @@ public function registrarFrituras(Request $request)
     session()->flash('exito', 'Se registro Sabor');
 
     return to_route('welcome');
+
 }
 
 
