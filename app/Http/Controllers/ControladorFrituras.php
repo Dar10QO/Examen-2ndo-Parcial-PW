@@ -22,7 +22,9 @@ public function registrarFrituras(Request $request)
         'peso'=>'required'
     ]);
 
-    session()->flash('exito', 'Se registro Sabor');
+    $sabor = $request->input('nombre');
+
+    session()->flash('exito', 'Se registro Sabor: '.$sabor);
 
     return to_route('welcome');
 
